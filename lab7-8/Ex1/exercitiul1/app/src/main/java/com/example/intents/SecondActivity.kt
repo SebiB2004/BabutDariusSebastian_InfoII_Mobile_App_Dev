@@ -21,10 +21,9 @@ class SecondActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // setContent trebuie să fie apelat direct în onCreate
+    
         setContent {
-            IntentsAndIntentFiltersTheme {
-                // Aici definești întreaga ierarhie de UI
+
                 Column(
                     modifier = Modifier.fillMaxSize(),
                     verticalArrangement = Arrangement.Center,
@@ -47,7 +46,7 @@ class SecondActivity : ComponentActivity() {
                     Text("Esti in Second Activity!")
 
                 }
-            }
+            
         }
     }
 }
