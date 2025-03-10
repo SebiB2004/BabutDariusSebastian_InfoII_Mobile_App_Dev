@@ -1,6 +1,5 @@
 package com.example.intents
 import android.content.Intent
-import com.example.intents.ui.theme.IntentsAndIntentFiltersTheme
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
