@@ -6,14 +6,18 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.intents.R
@@ -32,6 +36,11 @@ class MainActivity : ComponentActivity() {
                 horizontalAlignment = Alignment.CenterHorizontally
 
             ) {
+                Image(
+                    painter = painterResource(id = R.drawable.cartoonnetwork),
+                    contentDescription = "Imagine cu Cartoon Network",
+                    modifier = Modifier.fillMaxWidth().height(200.dp)
+                )
                 Button(onClick = {
                     Intent(this@MainActivity, SecondActivity::class.java).also {
                         startActivity(it)
@@ -48,6 +57,17 @@ class MainActivity : ComponentActivity() {
             )
             {
                 Text("Esti in activitatea principala!")
+            }
+            Column(
+                modifier = Modifier.fillMaxSize().padding(horizontal = 16.dp).padding(top = 150.dp),
+                verticalArrangement = Arrangement.Top,
+                horizontalAlignment = Alignment.CenterHorizontally
+            )
+            {
+                Text("Cartoon Network (abreviat deseori ca CN) este un canal de televiziune pe cablu din SUA" +
+                        "care difuzează desene animate " +
+                        "deținut de Warner Bros. Discovery.")
+
             }
         }
     }

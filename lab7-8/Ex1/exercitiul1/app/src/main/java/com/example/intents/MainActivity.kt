@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
 
                 Button(onClick = {
                     Intent(Intent.ACTION_MAIN).also {
-                        it.`package` = "com.google.android.youtube"
+                        it.`package` = "com.google.android.apps.youtube.music"
                         startActivity(it)
                     }
                 })
